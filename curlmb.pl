@@ -201,8 +201,6 @@ while (my $row = <$fh>) {
   #print "Processing $row";
 
 
-use WWW::Curl::Easy;
-
 my $user_agent = "Mozilla/5.0 (X11; Linux i686; rv:24.0) Gecko/20140319 Firefox/24.0 Iceweasel/24.4.0";
 
 my $curl = WWW::Curl::Easy->new;
