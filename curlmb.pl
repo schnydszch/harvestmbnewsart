@@ -30,6 +30,8 @@ use Text::Trim;
 
 our @titles;
 
+#test
+
 my $datetoday = strftime "%Y/%m/%d", localtime;
 #my $datetoday = "2020/07/20";
 my $datetodayconverted = strftime "%Y%m%d", localtime;
