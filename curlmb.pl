@@ -103,8 +103,8 @@ if ($retcode == 0) {
       # print("Received response: $response_body\n");
 	#get the number of pages
   my $curledurldatecomplete = $response_body;
-	#our ($numberofpages) = $curledurldatecomplete =~ /<i class=\"mb-icon-arrow-right\">.*?last.*?>(\d+)<\/a>/s;
-  our ($numberofpages) = $curledurldatecomplete =~ /<a class=\"last\".*?page\/(\d+)\/\"/s;
+	#our ($numberofpages) = $curledurldatecomplete =~ /<i class=\"mb-icon-arrow-right\">.*?last.*?>(\d+)<\/a>/m;
+  our ($numberofpages) = $curledurldatecomplete =~ /<a class=\"last\".*?page\/(\d+)\/\"/m;
   #<a class="last" href="https://mb.com.ph/2020/07/20/page/11/">11</a>
 #	print $var1;
 #	print $numberofpages;
@@ -115,7 +115,7 @@ if ($retcode == 0) {
 #}
 
 #print $curledurldatecomplete;
-#print $numberofpages;
+print $numberofpages;
 
 	my @array = (1..$numberofpages);
 	my $i = "";
